@@ -1,4 +1,7 @@
-module.exports = {
+const { defineConfig } = require("cypress")
+const cucumber = require('@badeball/cypress-cucumber-preprocessor').default
+
+module.exports = defineConfig({
   e2e: {
     baseUrl: 'https://www.demoblaze.com/',
     env: {
@@ -9,8 +12,9 @@ module.exports = {
     },
     viewportWidth: 1280,
     viewportHeight: 720,
+    specPattern: "**/*.feature",
     setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
-  },
-};
+      on("file:preprocessor", cucumber());
+    }
+  }
+})
