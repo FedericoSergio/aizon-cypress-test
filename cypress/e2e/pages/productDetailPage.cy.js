@@ -13,6 +13,10 @@ class ProductDetailPage {
         return
     }
 
+    moveToCart() {
+        cy.get('.navbar-nav.ml-auto').find('li').contains('a', 'Cart').click()
+    }
+
 }
 
 const productDetail = new ProductDetailPage();

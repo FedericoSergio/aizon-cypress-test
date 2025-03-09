@@ -1,6 +1,12 @@
 Feature: Add product to cart and then delete it
-    Background: Navigate to the Website
+    Background: I Log in with user
         Given I navigate to the Website
+        And I click on Log in Link
+        And I enter valid credential
+            | username       | validpassword |
+            | junior.QA.user | Pa$sw0rd12!   |
+        And I click on Log in button
+        Then Validate user is logged in
     Scenario: Add a product to cart
         When I select a random product
         And I am in the product detail page

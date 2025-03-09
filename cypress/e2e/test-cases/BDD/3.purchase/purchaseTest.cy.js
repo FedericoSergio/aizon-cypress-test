@@ -40,7 +40,7 @@ When("The purchase form opens", () => {
     cart.verifyPurchaseFormPresence()
 })
 
-When("I fill in the mandatory fields", () => {
+When("I fill in the mandatory fields", (datatable) => {
     datatable.hashes().forEach((element) => {
         cart.fillPurchaseFormMandatoryFields(element.name, element.cc);
     });

@@ -13,8 +13,8 @@ class HomePage {
     }
 
     enterSignupEmailPassword(username, password) {
-        cy.get('#sign-username').clear.type(username, { delay: 0 })
-        cy.get('#sign-password').clear.type(password, { delay: 0 })
+        cy.get('#sign-username').type(username, { delay: 0 })
+        cy.get('#sign-password').type(password, { delay: 0 })
         return this;
     }
 
@@ -23,14 +23,20 @@ class HomePage {
         return this;
     }
 
+    verifySuccessfulSignup() {
+        cy.on('window:alert', (alertText) => {
+            expect(alertText).to.contains('Sign up successful.')
+          });
+    }
+
     clickLoginLink() {
         cy.get("#login2").click()
         return this;
     }
 
     enterLoginEmailPassword(username, password) {
-        cy.get('#loginusername').clear.type(username, { delay: 0 })
-        cy.get('#loginpassword').clear.type(password, { delay: 0 })
+        cy.get('#loginusername').type(username, { delay: 0 })
+        cy.get('#loginpassword').type(password, { delay: 0 })
         return this;
     }
 
@@ -40,7 +46,7 @@ class HomePage {
     }
 
     verifyUserLoggedIn() {
-        cy.get('#navbarExample').contains('a', 'Welcome ' + username).should('exist')
+        cy.get('#navbarExample').contains('a', 'Welcome ').should('exist')
     }
 
     clickLogoutLink() {

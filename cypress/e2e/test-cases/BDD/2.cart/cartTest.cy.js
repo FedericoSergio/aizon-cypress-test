@@ -21,7 +21,7 @@ When("I click on Add to cart button", () => {
 });
 
 When("I move to cart page", () => {
-    cart.openCart()
+    cart.moveToCart()
 });
 
 When("I delete a product", () => {

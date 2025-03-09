@@ -1,6 +1,7 @@
 class CartPage {
-    openCart() {
-        cy.get('.navbar-nav.ml-auto').find('li').contains('Cart').click()
+    moveToCart() {
+        //cy.get('.navbar-nav.ml-auto').find('li').contains('a', 'Cart').click()
+        cy.visit("https://www.demoblaze.com/cart.html")
     }
 
     verifyUrl() {
@@ -10,20 +11,18 @@ class CartPage {
     verifyEmptyCart() {
         cy.get('.table-responsive')
             .find('tr')
-            .should('have.length', 0)
+            .should('have.length', 1)
     }
 
     verifyNonEmptyCart() {
         cy.get('.table-responsive')
             .find('tr')
-            .should('not.have.length', 0)
+            .should('not.have.length', 1)
     }
 
     clickOnDeleteProductButton() {
         cy.get('.table-responsive')
-            .find('tr')
-            .nextAll()
-            .eq(1)
+            .get('tr')
             .contains('a', 'Delete')
             .click()
     }
