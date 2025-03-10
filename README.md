@@ -1,5 +1,5 @@
 # AIZON TECHNICAL TEST
-## Cypress test assessment
+## Cypress assessment with Cucumber support
 
 
 The project requires `npm` and `cypress` correclty installed and updated
