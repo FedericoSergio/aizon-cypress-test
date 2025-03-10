@@ -10,8 +10,8 @@ context('Successful purchase', () => {
         cy.get('#tbodyid').should('exist')
 
         //select a random product from first page
-        const product = cy.get('#tbodyid').children().eq(Math.floor(Math.random() * 9));
-        product.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const product = cy.get('#tbodyid').children().eq(Math.floor(Math.random() * 9))
+        product.scrollIntoView({ behavior: 'smooth', block: 'center' })
         product.click('top')
         
         //on product details, add it to cart

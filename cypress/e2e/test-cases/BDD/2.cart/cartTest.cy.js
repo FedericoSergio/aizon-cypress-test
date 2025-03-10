@@ -6,23 +6,23 @@ import cart from "../../../pages/cartPage.cy.js";
 
 Given("I navigate to the Website", () => {
     home.enterURL();
-});
+})
 
 When("I select a random product", () => {
     home.selectRandomProduct()
-});
+})
 
 When("I am in the product detail page", () => {
     productDetail.verifyUrl()
-});
+})
 
 When("I click on Add to cart button", () => {
     productDetail.addToCart()
-});
+})
 
 When("I move to cart page", () => {
     cart.moveToCart()
-});
+})
 
 When("I delete a product", () => {
     cart.clickOnDeleteProductButton()
@@ -30,8 +30,8 @@ When("I delete a product", () => {
 
 Then("The cart is not empty", () => {
     cart.verifyNonEmptyCart()
-});
+})
 
 Then("The cart is empty", () => {
     cart.verifyEmptyCart()
-});
+})

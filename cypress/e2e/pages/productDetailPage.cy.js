@@ -1,20 +1,21 @@
 class ProductDetailPage {
 
     verifyUrl() {
-        cy.url().should('include', 'prod.html')
-        return
+        cy.url().should('include', 'prod.html');
+        return;
     }
 
     addToCart() {
-        cy.contains('a', 'Add to cart').click()
+        cy.contains('a', 'Add to cart').click();
         cy.on('window:alert', (alertText) => {
-            expect(alertText).to.contains('Product added')
+            expect(alertText).to.contains('Product added');
         });
-        return
+        return;
     }
 
     moveToCart() {
-        cy.get('.navbar-nav.ml-auto').find('li').contains('a', 'Cart').click()
+        cy.get('.navbar-nav.ml-auto').find('li').contains('a', 'Cart').click();
+        return;
     }
 
 }
