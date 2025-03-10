@@ -8,7 +8,7 @@ The project requires `npm` and `cypress` correclty installed and updated
 npm install
 cypress install
 ```
-
+Once the repository is downloaded locally everything is ready to go.
 The configuration is already setup to show only the `.feature` files, it is sufficient to run the script:
 
 ```
