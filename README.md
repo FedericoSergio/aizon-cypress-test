@@ -15,4 +15,4 @@ The tests are already setup to show only the `.feature` files, it is sufficient 
 npm run cy:open
 ```
 
-Selecting the browser (Chrome suggested) it is then possible to select the desired test case.
+selecting the browser (Chrome suggested) anf the test case.
