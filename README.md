@@ -9,7 +9,7 @@ npm install
 cypress install
 ```
 
-The tests are already setup to show only the `.feature` files, it is sufficient to run the script:
+The configuration is already setup to show only the `.feature` files, it is sufficient to run the script:
 
 ```
 npm run cy:open
