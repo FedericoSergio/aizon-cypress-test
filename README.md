@@ -15,4 +15,4 @@ The tests are already setup to show only the `.feature` files, it is sufficient 
 npm run cy:open
 ```
 
-selecting the browser (Chrome suggested) anf the test case.
+to open the cypress dashboard, then selecting a browser (Chrome suggested) the test cases will show up.
