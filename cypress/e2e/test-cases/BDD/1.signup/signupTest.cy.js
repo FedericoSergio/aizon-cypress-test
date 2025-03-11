@@ -49,3 +49,7 @@ Then("Validate the title after login", () => {
 When("I click logout link", () => {
     home.clickLogoutLink();
 })
+
+Then("Validate user is logged out", () => {
+    home.verifyUserLoggedOut();
+})

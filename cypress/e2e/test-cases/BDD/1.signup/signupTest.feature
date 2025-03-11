@@ -9,7 +9,7 @@ Feature: Login into the site with valid data
         And I click on Sign up button
         Then The sign up is successful
     Scenario: Log in in the application with valid data
-        And I click on Log in Link
+        When I click on Log in Link
         And I enter valid credential
             | username       | validpassword |
             | junior.QA.user | Pa$sw0rd12!   |
@@ -17,3 +17,4 @@ Feature: Login into the site with valid data
         Then Validate user is logged in
         Then Validate the title after login
         When I click logout link
+        Then Validate user is logged out

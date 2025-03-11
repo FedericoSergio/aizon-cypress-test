@@ -65,6 +65,11 @@ class HomePage {
         product.click('top');
         return product;
     }
+
+    verifyUserLoggedOut() {
+        cy.get('#navbarExample').contains('a', 'Welcome ').should('not.exist');
+        return;
+    }
 }
 
 const home = new HomePage();
