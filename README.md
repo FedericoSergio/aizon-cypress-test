@@ -2,7 +2,7 @@
 ## Cypress assessment with Cucumber support
 
 
-The project requires `npm` and `cypress` correclty installed and updated
+The project requires `npm` and `cypress` correctly installed and updated
 
 ```
 npm install
@@ -15,4 +15,4 @@ The configuration is already setup to show only the `.feature` files, it is suff
 npm run cy:open
 ```
 
-to open the cypress dashboard, then selecting a browser (Chrome suggested) the test cases will show up.
+to open the cypress dashboard, then selecting a browser the test cases will show up.
